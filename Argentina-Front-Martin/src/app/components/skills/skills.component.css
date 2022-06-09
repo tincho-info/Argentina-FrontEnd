@@ -1,0 +1,18 @@
+.mat-card{
+    border-radius: 15px;
+    margin: 8px 5px;
+    padding: 20px;
+    border-color: rgb(15, 11, 1);
+    background-color: antiquewhite;
+}
+.btn-edit {
+    float: right;
+}
+
+h3 {
+    margin: 0;
+    display: inline-block;
+}
+.botones a{
+    margin-right: 1em;
+}

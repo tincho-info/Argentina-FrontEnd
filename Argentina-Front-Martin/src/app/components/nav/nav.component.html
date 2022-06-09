@@ -1,0 +1,13 @@
+<!-- Nav -->
+<nav class="social">
+    <!-- Redes -->
+    <ul id="social">
+        <li *ngFor="let link of socialLinks">
+            <app-social-link [link]="link"></app-social-link> <!-- Pasar cosas al componente-->
+        </li>
+    </ul>
+
+    <!-- Login Btn -->
+    <button type="button" class="btn btn-outline-light" (click)="iniciarSesion()" *ngIf="!login">Iniciar Sesión</button>
+    <button type="button" class="btn btn-outline-light" (click)="cerrarSesion()" *ngIf="login">Cerrar Sesión</button>
+</nav>

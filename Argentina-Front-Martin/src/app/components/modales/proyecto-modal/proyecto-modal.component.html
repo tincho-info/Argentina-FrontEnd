@@ -1,0 +1,18 @@
+<form [formGroup]="formulario" (ngSubmit)="guardarProyecto()">
+    <div class="modal-header">
+        <h5 class="modal-title">Editar/Agregar "Proyecto"</h5>
+    </div>
+    <div class="modal-body">
+        <h6>Título: </h6>
+        <input type="text" class="form-control" placeholder="Titulo del proyecto" formControlName="titulo">
+        <h6>Descripcion: </h6>
+        <input type="text" class="form-control" placeholder="Descripcion" formControlName="descripcion">
+        <h6>Enlace: </h6>
+        <input type="text" class="form-control" placeholder="Enlace" formControlName="url">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="cerrarModal()">Cerrar</button>
+        <button class="btn btn-primary me-3">Guardar</button>
+    </div>
+
+</form>

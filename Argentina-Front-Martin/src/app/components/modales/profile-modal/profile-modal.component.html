@@ -1,0 +1,26 @@
+<form [formGroup]="formulario " (ngSubmit)="actualizarProfile()">
+    <div class="modal-header">
+        <h5 class="modal-title">Editar "Perfil"</h5>
+    </div>
+    <div class="modal-body">
+        <h6>Título: </h6>
+        <input type="text" class="form-control" placeholder="Titulo Adquirido" formControlName="titulo">
+        <h6>Nombre: </h6>
+        <input type="text" class="form-control" placeholder="Nombre" formControlName="nombre">
+        <h6>Apellido: </h6>
+        <input type="text" class="form-control" placeholder="Apellido" formControlName="apellido">
+        <h6>Email: </h6>
+        <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
+        <h6>Telefono: </h6>
+        <input type="text" class="form-control" placeholder="Telefono" formControlName="telefono">
+        <h6>Ubicación: </h6>
+        <input type="text" class="form-control" placeholder="Ubicación" formControlName="ubicacion">
+        <h6>Foto de perfil: </h6>
+        <input type="text" class="form-control" placeholder="Foto Perfil" formControlName="fotourl">
+        <h6>Foto de portada: </h6>
+        <input type="text" class="form-control" placeholder="Foto Portada" formControlName="coverurl">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="cerrarModal()">Cerrar</button>
+        <button class="btn btn-primary me-3">Guardar</button>
+    </div>

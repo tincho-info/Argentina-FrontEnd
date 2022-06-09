@@ -1,0 +1,19 @@
+<form [formGroup]="formulario" (ngSubmit)="guardarEducacion()">
+    <div class="modal-header">
+        <h5 class="modal-title">Editar/Agregar "Educación"</h5>
+    </div>
+    <div class="modal-body">
+        <h6>Institución: </h6>
+        <input type="text" class="form-control" placeholder="Institucion" formControlName="institucion">
+        <h6>Título: </h6>
+        <input type="text" class="form-control" placeholder="Titulo" formControlName="titulo">
+        <h6>Fecha de egresado: </h6>
+        <input type="date" class="form-control" placeholder="fecha egresado" formControlName="fechafin">
+        <h6>Logo institución: </h6>
+        <input type="text" class="form-control" placeholder="subir logo instituto" formControlName="fotourl">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="cerrarModal()">Cerrar</button>
+        <button class="btn btn-primary me-3">Guardar</button>
+    </div>
+</form>

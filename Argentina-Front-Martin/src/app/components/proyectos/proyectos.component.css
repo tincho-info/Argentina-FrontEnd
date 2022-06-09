@@ -1,0 +1,36 @@
+.mat-card {
+    border-radius: 15px;
+    margin: 8px 5px;
+    padding: 20px;
+    border-color: rgb(15, 11, 1);
+    background-color: antiquewhite;
+}
+
+.btn-agregar {
+    float: right;
+}
+
+h3 {
+    margin: 0;
+    display: inline-block;
+}
+
+.card-horizontal {
+    flex: right;
+}
+#botonEditar{
+    margin-right: 3px;
+}
+.cuadros{
+    background-color: rgba(224, 127, 16, 0.274);
+    border-radius: 1em;
+    border-style: solid;
+}
+.cuadros2{
+    margin: 1px 2px ;
+    padding: 8px;
+}
+h3 {
+    margin: 0 4px 0 0;
+    display: inline-block;
+}

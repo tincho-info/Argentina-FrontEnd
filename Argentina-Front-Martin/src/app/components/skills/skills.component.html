@@ -1,0 +1,26 @@
+<div id="habilidades"></div>
+<div class=" card mat-card">
+  <h3>
+    Habilidades
+    <div class="btn-edit"><a href="#" class="btn-right"><i id="icono" class="fa-solid fa-plus"></i></a>
+    </div>
+  </h3>
+  <div class="row">
+    <div *ngFor="let item of skill" class="col text-center">
+      <circle-progress class="skills" 
+        [backgroundGradient]=true 
+        [percent]="item.dominio" 
+        [subtitle]="item.titulo"
+        [radius]="60" 
+        [outerStrokeWidth]="8" 
+        [innerStrokeWidth]="5" 
+        [animation]="true" 
+        [animationDuration]="1500"
+        [backgroundOpacity]=".6" 
+        [backgroundPadding]="-5" 
+        [lazy]=false>
+      </circle-progress>
+      <button *ngIf="login" (click)="abrirModal(item.idskill)" style="border: none;margin: -5em 0;background-color: antiquewhite;"><img src="https://i.imgur.com/6Anx3OY.png"></button>
+    </div>
+  </div>
+</div>

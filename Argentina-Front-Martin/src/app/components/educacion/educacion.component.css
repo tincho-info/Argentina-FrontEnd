@@ -1,0 +1,27 @@
+.mat-card {
+    border-radius: 15px;
+    margin: 8px 5px;
+    padding: 20px;
+    border-color: rgb(15, 11, 1);
+    background-color: antiquewhite;
+}
+.card-horizontal {
+    flex: right;
+}
+#botonEditar{
+    margin-right: 3px;
+}
+h3 {
+    margin: 0;
+    display: inline-block;
+}
+.btn-agregar {
+    float: right;
+}
+#Logo-img {
+    border-radius: 1em;
+    width: 8rem;
+    height: 8rem;
+    z-index: 1;
+    border: 3px solid;
+}

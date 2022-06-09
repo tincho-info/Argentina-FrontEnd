@@ -1,0 +1,23 @@
+<form [formGroup]="formulario" (ngSubmit)="guardarExperiencia()">
+    <div class="modal-header">
+        <h5 class="modal-title">Editar/Agregar "Experiencia"</h5>
+    </div>
+    <div class="modal-body">
+        <h6>Puesto: </h6>
+        <input type="text" class="form-control" placeholder="Puesto" formControlName="puesto">
+        <h6>Descripcion: </h6>
+        <input type="text" class="form-control" placeholder="Descripcion" formControlName="descripcion">
+        <h6>Empresa: </h6>
+        <input type="text" class="form-control" placeholder="Nombre de la empresa" formControlName="empresa">
+        <h6>Fecha de inicio: </h6>
+        <input type="date" class="form-control" placeholder="Fecha de inicio" formControlName="inicio">
+        <h6>Fecha de fin:</h6>
+        <input type="date" class="form-control" placeholder="Fecha de fin" formControlName="fin">
+        <h6>Logo empresa: </h6>
+        <input type="text" class="form-control" placeholder="Logo empresa" formControlName="fotourl">
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" (click)="cerrarModal()">Cerrar</button>
+        <button class="btn btn-primary me-3">Guardar</button>
+    </div>
+</form>

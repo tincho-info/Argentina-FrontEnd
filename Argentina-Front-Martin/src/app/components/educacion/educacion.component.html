@@ -1,0 +1,28 @@
+<div id="educacion"></div>
+<div class="card mat-card" id="three-card">
+  <h3>
+    Educación
+    <div class="btn-agregar">
+      <app-addbutton *ngIf="login" (click)="crearEducacionModal()"></app-addbutton>
+    </div>
+  </h3>
+  <div class="card" style="width: auto;margin: 3px 0px ;background-color: rgba(224, 127, 16, 0.274);">
+    <div class="card-body">
+      <ul *ngFor="let edu of educacion" style="list-style: none;">
+        <li>
+          <div class="col-md-4">
+            <img [src]="edu.fotourl" id="Logo-img" alt="Logo Educacion">
+          </div>
+          <h5 class="card-title">{{edu.titulo}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{edu.institucion}}</h6>
+          <h6>{{edu.fechafin}}</h6>
+        </li>
+        <div *ngIf="login">
+          <app-editbutton2 (click)="abrirModal(edu.ideducacion)" class="me-2"></app-editbutton2>
+          <app-deletebutton (click)="borrarEducacion(edu.ideducacion)"> </app-deletebutton>
+        </div>
+        <div class="text-center p-1" style="margin: 4px 0;background-color: rgb(85, 74, 42);"></div>
+      </ul>
+    </div>
+  </div>
+</div>

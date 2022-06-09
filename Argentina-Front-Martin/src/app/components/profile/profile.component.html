@@ -1,0 +1,52 @@
+<div id="perfil"></div>
+<div class="card mat-card" id="first-card">
+    <!-- <img src="../../../assets/portada2.jpg"> -->
+    <app-banner [url]="persona.coverurl"></app-banner>
+    <div id="" style="padding: 16px">
+        <div class="info-img">
+            <div class="d-flex justify-content-end">
+                <app-editbutton id="fantasma" *ngIf="login" (click)="abrirModal(persona.idpersona)" class="me-2">
+                </app-editbutton>
+            </div>
+            <img [src]="persona.fotourl" id="profile-img" alt="Foto de perfil de {{persona.nombre}}">
+        </div>
+        <div>
+            <div>
+                <h2>{{persona.nombre}} {{persona.apellido}}</h2>
+                <div id="profile-profesion" class="text-body-medium break-words">{{persona.titulo}}</div>
+                <div id="profile-contacto">
+                    <span>{{persona.ubicacion}}</span>
+                    <span>-</span>
+                    <span data-bs-toggle="modal" data-bs-target="#exampleModal"><a href="#">Información de
+                            contacto</a></span>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Información de contacto</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Nombre: {{persona.nombre}}</p>
+                                    <p>Apellido: {{persona.apellido}}</p>
+                                    <p>Email: {{persona.email}}</p>
+                                    <p>Teléfono: {{persona.telefono}}</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" title="Botón no funcional" id="first-button" class="btn btn-primary">Tengo interés en...</button>
+            <button type="button" title="Botón no funcional" class="btn btn-secondary">Añadir sección</button>
+        </div>
+    </div>
+</div>
+<app-about></app-about>

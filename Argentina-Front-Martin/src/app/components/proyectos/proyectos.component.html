@@ -1,0 +1,30 @@
+<div id="proyectos"></div>
+<div class="card mat-card" id="three-card">
+  <h3>
+    Proyectos
+    <div class="btn-agregar">
+      <app-addbutton *ngIf="login" (click)="abrirModalAgregar()"></app-addbutton>
+    </div>
+  </h3>
+  <ul class="list-unstyled" *ngFor="let pro of proyecto">
+    <li class="media">
+      <div class="cuadros">
+        <div class="cuadros2">
+          <div class="media-body">
+            <h5 class="mt-0 mb-1">{{pro.titulo}}</h5>
+            <div>
+              {{pro.descripcion}}
+            </div>
+            <a [href]="pro.url">Enlace</a> 
+            <div *ngIf="login">
+              <app-editbutton2 (click)="abrirModal(pro.idproyecto)" class="me-2"></app-editbutton2>
+              <app-deletebutton (click)="borrarProyecto (pro.idproyecto)"> </app-deletebutton>
+            </div>
+          </div>
+        </div>
+      </div>
+    </li>
+    <div class="text-center p-1" style="margin-top: 7px;margin-bottom: -8px;background-color: rgb(85, 74, 42);">
+    </div>
+  </ul>
+</div>

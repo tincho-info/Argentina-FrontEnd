@@ -2,8 +2,9 @@
 <div class="card mat-card" id="second-card">
       <h3>Acerca de
             <div class="btn-edit">
-                  <app-editbutton *ngIf="login" data-toggle="modal" data-target="#exampleModal" (click)="abrirModal(persona.idpersona)" class="me-2"></app-editbutton>
+                  <app-editbutton *ngIf="login" data-toggle="modal" data-target="#exampleModal"
+                        (click)="abrirModal(persona.idpersona)" class="me-2"></app-editbutton>
             </div>
       </h3>
       <p class="card-text">{{persona.acerca}}</p>
-</div> 
+</div>
